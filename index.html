@@ -1,24 +1,575 @@
-<!-- =========================
-index.html
-انسخي هذا الملف كامل كما هو
-========================= -->
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOJI MOON | Hidden Elegance</title>
 
-<title>SOJI MOON</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#120205;
+color:white;
+overflow-x:hidden;
+}
+
+/* =========================
+TOP BAR
+========================= */
+
+.top-bar{
+background:#220107;
+color:#d7aa67;
+text-align:center;
+padding:10px;
+font-size:14px;
+letter-spacing:1px;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.top-bar span{
+margin-left:8px;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+nav{
+background:#090102;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 7%;
+border-bottom:1px solid rgba(255,255,255,0.05);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.icons{
+display:flex;
+gap:25px;
+font-size:22px;
+color:#d7aa67;
+}
+
+.icons i{
+cursor:pointer;
+transition:0.3s;
+}
+
+.icons i:hover{
+color:#ffbfd2;
+transform:translateY(-2px);
+}
+
+/* =========================
+LOGO
+========================= */
+
+.logo{
+text-align:center;
+color:#d7aa67;
+}
+
+.moons{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:7px;
+margin-bottom:10px;
+}
+
+.moon{
+width:28px;
+height:12px;
+background:linear-gradient(to right,#ff89b5,#ff5f91);
+border-radius:50%;
+box-shadow:0 0 18px rgba(255,105,180,0.6);
+}
+
+.moon:nth-child(2){
+width:38px;
+}
+
+.moon:nth-child(3){
+width:48px;
+}
+
+.moon:nth-child(4){
+width:60px;
+height:20px;
+}
+
+.logo h1{
+font-size:38px;
+letter-spacing:3px;
+font-weight:800;
+}
+
+.logo p{
+font-size:12px;
+letter-spacing:4px;
+margin-top:4px;
+}
+
+/* =========================
+MENU
+========================= */
+
+.menu{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.menu a{
+text-decoration:none;
+color:white;
+font-size:18px;
+position:relative;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#d7aa67;
+}
+
+.menu .active::after{
+content:'';
+position:absolute;
+right:0;
+bottom:-10px;
+width:100%;
+height:2px;
+background:#d7aa67;
+}
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:100vh;
+background:
+linear-gradient(to left,rgba(0,0,0,0.2),rgba(0,0,0,0.3)),
+#170205;
+}
+
+/* LEFT SIDE */
+
+.hero-image{
+position:relative;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+.hero-image img{
+width:100%;
+max-width:700px;
+border-radius:20px;
+box-shadow:0 0 60px rgba(0,0,0,0.6);
+}
+
+/* RIGHT SIDE */
+
+.hero-content{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:50px;
+}
+
+.big-moons{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+margin-bottom:30px;
+}
+
+.big-moons div{
+background:linear-gradient(to right,#ff89b5,#ff5f91);
+border-radius:50%;
+box-shadow:0 0 25px rgba(255,105,180,0.7);
+}
+
+.big-moons div:nth-child(1){
+width:40px;
+height:14px;
+}
+
+.big-moons div:nth-child(2){
+width:55px;
+height:18px;
+}
+
+.big-moons div:nth-child(3){
+width:70px;
+height:22px;
+}
+
+.big-moons div:nth-child(4){
+width:95px;
+height:95px;
+}
+
+.hero-content h2{
+font-size:90px;
+color:#d7aa67;
+line-height:1;
+margin-bottom:10px;
+}
+
+.hero-content h3{
+font-size:22px;
+letter-spacing:7px;
+color:#d7aa67;
+margin-bottom:25px;
+}
+
+.hero-content p{
+font-size:34px;
+color:#f0d5aa;
+margin-bottom:40px;
+}
+
+.hero-content button{
+background:#d7aa67;
+color:#220107;
+border:none;
+padding:18px 55px;
+font-size:20px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+font-weight:700;
+}
+
+.hero-content button:hover{
+background:#f0d5aa;
+transform:translateY(-3px);
+}
+
+/* =========================
+CATEGORIES
+========================= */
+
+.categories{
+background:#100103;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+border-top:1px solid rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.category{
+padding:45px 20px;
+text-align:center;
+border-left:1px solid rgba(255,255,255,0.05);
+}
+
+.circle{
+width:85px;
+height:85px;
+border:2px solid #7d5632;
+border-radius:50%;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:#d7aa67;
+margin-bottom:20px;
+}
+
+.category h4{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.category p{
+color:#c7a57d;
+}
+
+/* =========================
+PRODUCTS
+========================= */
+
+.products{
+padding:100px 7%;
+background:#120205;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-size:48px;
+color:#d7aa67;
+margin-bottom:15px;
+}
+
+.section-title .line{
+width:120px;
+height:3px;
+background:#d7aa67;
+margin:auto;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.product-card{
+background:#180306;
+border:1px solid rgba(255,255,255,0.05);
+border-radius:20px;
+overflow:hidden;
+position:relative;
+transition:0.4s;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.product-card .fav{
+position:absolute;
+top:20px;
+left:20px;
+color:#d7aa67;
+font-size:22px;
+z-index:10;
+}
+
+.product-card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.product-info{
+padding:25px;
+text-align:center;
+}
+
+.product-info h3{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.product-info p{
+font-size:22px;
+color:#d7aa67;
+margin-bottom:20px;
+}
+
+.product-info button{
+width:100%;
+padding:15px;
+background:transparent;
+border:1px solid #7d5632;
+color:#d7aa67;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.product-info button:hover{
+background:#d7aa67;
+color:#120205;
+}
+
+/* =========================
+FEATURES
+========================= */
+
+.features{
+background:#100103;
+padding:70px 7%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.feature{
+text-align:center;
+}
+
+.feature i{
+font-size:45px;
+color:#d7aa67;
+margin-bottom:20px;
+}
+
+.feature h4{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.feature p{
+color:#c7a57d;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact{
+padding:100px 7%;
+text-align:center;
+background:#120205;
+}
+
+.contact h2{
+font-size:50px;
+color:#d7aa67;
+margin-bottom:40px;
+}
+
+.contact-form{
+max-width:700px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:20px;
+margin-bottom:20px;
+background:#1a0608;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:12px;
+color:white;
+font-size:18px;
+}
+
+.contact-form textarea{
+height:180px;
+resize:none;
+}
+
+.contact-form button{
+background:#d7aa67;
+color:#120205;
+border:none;
+padding:18px 50px;
+font-size:20px;
+font-weight:700;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#070101;
+text-align:center;
+padding:50px 20px;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+footer h3{
+font-size:35px;
+color:#d7aa67;
+margin-bottom:20px;
+}
+
+footer p{
+color:#b9a18b;
+margin-bottom:12px;
+font-size:18px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.products-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.categories{
+grid-template-columns:repeat(2,1fr);
+}
+
+.features{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero-content h2{
+font-size:65px;
+}
+
+}
+
+@media(max-width:700px){
+
+.menu{
+display:none;
+}
+
+.products-grid{
+grid-template-columns:1fr;
+}
+
+.categories{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.hero-content h2{
+font-size:48px;
+}
+
+.hero-content p{
+font-size:24px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
@@ -26,14 +577,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <!-- TOP BAR -->
 
 <div class="top-bar">
-شحن مجاني لجميع الطلبات فوق 500 ريال
+<span>✦</span>
+شحن مجاني لجميع الطلبات فوق 50,000 جنيه
 </div>
 
 <!-- NAVBAR -->
 
 <nav>
 
-<div class="nav-icons">
+<div class="icons">
+<i class="fa-solid fa-bag-shopping"></i>
 <i class="fa-regular fa-heart"></i>
 <i class="fa-regular fa-user"></i>
 <i class="fa-solid fa-magnifying-glass"></i>
@@ -41,31 +594,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <div class="logo">
 
-<div class="moon-logo">
-
-<div class="moon moon1"></div>
-<div class="moon moon2"></div>
-<div class="moon moon3"></div>
-<div class="moon moon4"></div>
-
+<div class="moons">
+<div class="moon"></div>
+<div class="moon"></div>
+<div class="moon"></div>
+<div class="moon"></div>
 </div>
 
-<div class="logo-text">
 <h1>SOJI MOON</h1>
 <p>HIDDEN ELEGANCE</p>
-</div>
 
 </div>
 
-<ul>
-
-<li><a class="active" href="#">الرئيسية</a></li>
+<ul class="menu">
+<li><a href="#" class="active">الرئيسية</a></li>
 <li><a href="#">العطور</a></li>
 <li><a href="#">الإكسسوارات</a></li>
 <li><a href="#">العروض</a></li>
 <li><a href="#">من نحن</a></li>
-<li><a href="#">تواصل معنا</a></li>
-
+<li><a href="#contact">تواصل معنا</a></li>
 </ul>
 
 </nav>
@@ -76,19 +623,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop" alt="">
 
 </div>
 
 <div class="hero-content">
 
-<div class="hero-moons">
-
-<div class="hero-moon moon1"></div>
-<div class="hero-moon moon2"></div>
-<div class="hero-moon moon3"></div>
-<div class="hero-moon moon4"></div>
-
+<div class="big-moons">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
 </div>
 
 <h2>SOJI MOON</h2>
@@ -96,12 +641,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <h3>HIDDEN ELEGANCE</h3>
 
 <p>
-عطور تترك أثراً... وأناقة تدوم
+عطور تترك أثرًا... وأناقة تدوم
 </p>
 
-<a href="#" class="shop-btn">
+<button>
 تسوق الآن
-</a>
+</button>
 
 </div>
 
@@ -111,33 +656,43 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="categories">
 
-<div class="category-card">
-<i class="fa-solid fa-gift"></i>
-<h3>المجموعات</h3>
+<div class="category">
+<div class="circle">
+<i class="fa-solid fa-spray-can-sparkles"></i>
+</div>
+<h4>العطور</h4>
 <p>تسوق الآن</p>
 </div>
 
-<div class="category-card">
-<i class="fa-solid fa-bag-shopping"></i>
-<h3>الحقائب</h3>
+<div class="category">
+<div class="circle">
+<i class="fa-solid fa-gem"></i>
+</div>
+<h4>الإكسسوارات</h4>
 <p>تسوق الآن</p>
 </div>
 
-<div class="category-card">
+<div class="category">
+<div class="circle">
 <i class="fa-regular fa-clock"></i>
-<h3>الساعات</h3>
+</div>
+<h4>الساعات</h4>
 <p>تسوق الآن</p>
 </div>
 
-<div class="category-card">
-<i class="fa-regular fa-gem"></i>
-<h3>الإكسسوارات</h3>
+<div class="category">
+<div class="circle">
+<i class="fa-solid fa-bag-shopping"></i>
+</div>
+<h4>الحقائب</h4>
 <p>تسوق الآن</p>
 </div>
 
-<div class="category-card">
-<i class="fa-solid fa-wine-bottle"></i>
-<h3>العطور</h3>
+<div class="category">
+<div class="circle">
+<i class="fa-solid fa-gift"></i>
+</div>
+<h4>المجموعات</h4>
 <p>تسوق الآن</p>
 </div>
 
@@ -147,13 +702,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="products">
 
-<h2 class="section-title">
-منتجات مميزة
-</h2>
+<div class="section-title">
+<h2>منتجات مميزة</h2>
+<div class="line"></div>
+</div>
 
 <div class="products-grid">
 
-<!-- PRODUCT -->
+<!-- PRODUCT 1 -->
 
 <div class="product-card">
 
@@ -161,21 +717,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <i class="fa-regular fa-heart"></i>
 </div>
 
-<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop">
 
+<div class="product-info">
 <h3>عطر سوجيمون الأحمر</h3>
-
-<p class="price">
-280 ريال
-</p>
-
-<button>
-أضف للسلة
-</button>
+<p>28,000 جنيه</p>
+<button>أضف للسلة</button>
+</div>
 
 </div>
 
-<!-- PRODUCT -->
+<!-- PRODUCT 2 -->
 
 <div class="product-card">
 
@@ -185,19 +737,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1200&auto=format&fit=crop">
 
+<div class="product-info">
 <h3>قلادة هلال</h3>
-
-<p class="price">
-180 ريال
-</p>
-
-<button>
-أضف للسلة
-</button>
+<p>18,000 جنيه</p>
+<button>أضف للسلة</button>
+</div>
 
 </div>
 
-<!-- PRODUCT -->
+<!-- PRODUCT 3 -->
 
 <div class="product-card">
 
@@ -205,21 +753,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <i class="fa-regular fa-heart"></i>
 </div>
 
-<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=1200&auto=format&fit=crop">
 
+<div class="product-info">
 <h3>سوار الأناقة</h3>
-
-<p class="price">
-160 ريال
-</p>
-
-<button>
-أضف للسلة
-</button>
+<p>16,000 جنيه</p>
+<button>أضف للسلة</button>
+</div>
 
 </div>
 
-<!-- PRODUCT -->
+<!-- PRODUCT 4 -->
 
 <div class="product-card">
 
@@ -229,15 +773,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1200&auto=format&fit=crop">
 
+<div class="product-info">
 <h3>عطر سوجيمون الذهبي</h3>
-
-<p class="price">
-300 ريال
-</p>
-
-<button>
-أضف للسلة
-</button>
+<p>30,000 جنيه</p>
+<button>أضف للسلة</button>
+</div>
 
 </div>
 
@@ -249,48 +789,83 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="features">
 
-<div class="feature-box">
-<i class="fa-solid fa-headset"></i>
-<h3>دعم 24/7</h3>
-<p>تواصل معنا في أي وقت</p>
+<div class="feature">
+<i class="fa-solid fa-truck-fast"></i>
+<h4>شحن سريع</h4>
+<p>إلى جميع المناطق</p>
 </div>
 
-<div class="feature-box">
-<i class="fa-solid fa-award"></i>
-<h3>منتجات أصلية</h3>
-<p>جودة مضمونة</p>
-</div>
-
-<div class="feature-box">
+<div class="feature">
 <i class="fa-solid fa-shield-halved"></i>
-<h3>دفع آمن</h3>
+<h4>دفع آمن</h4>
 <p>حماية كاملة للبيانات</p>
 </div>
 
-<div class="feature-box">
-<i class="fa-solid fa-truck-fast"></i>
-<h3>شحن سريع</h3>
-<p>إلى جميع المناطق</p>
+<div class="feature">
+<i class="fa-solid fa-award"></i>
+<h4>منتجات أصلية</h4>
+<p>جودة مضمونة</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-headset"></i>
+<h4>دعم 24/7</h4>
+<p>تواصل معنا في أي وقت</p>
 </div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section class="contact" id="contact">
 
-<h2>
-تواصل معنا
-</h2>
+<h2>تواصل معنا</h2>
+
+<form class="contact-form"
+action="https://formspree.io/f/xvzypaod"
+method="POST">
+
+<input type="text"
+name="name"
+placeholder="الاسم الكامل"
+required>
+
+<input type="email"
+name="email"
+placeholder="البريد الإلكتروني"
+required>
+
+<textarea
+name="message"
+placeholder="اكتب رسالتك هنا..."
+required></textarea>
+
+<input type="hidden"
+name="_replyto"
+value="sojimoon178@gamil.com">
+
+<button type="submit">
+إرسال الرسالة
+</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>SOJI MOON</h3>
 
 <p>
 sojimoon178@gamil.com
 </p>
 
-</section>
-
-<footer>
+<p>
 جميع الحقوق محفوظة © SOJI MOON
+</p>
+
 </footer>
 
 </body>
